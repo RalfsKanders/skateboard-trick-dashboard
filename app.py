@@ -7,7 +7,7 @@ st.title("Skateboarding Trick Classification Dashboard")
 
 @st.cache_data
 def load_data():
-    url = "https://raw.githubusercontent.com/LightningDrop/SkateboardML/main/skateboard_tricks.csv"
+    url = "https://raw.githubusercontent.com/RalfsKanders/SkateboardML/main/skateboard_tricks.csv"
     df = pd.read_csv(url)
     return df
 
