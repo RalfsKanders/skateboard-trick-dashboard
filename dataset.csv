@@ -1,4 +1,19 @@
-Trick,Difficulty,Type
-Ollie,3,Flip
-Kickflip,4,Flip
-Heelflip,3,Flip
+import pandas as pd
+
+data = {
+    'Year': [2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020, 2020],
+    'Event Type': ['Street', 'Park', 'Street', 'Park', 'Street', 'Park', 'Street', 'Park', 'Street'],
+    'Skater Name': ['Yuto Horigome', 'Sky Brown', 'Nishiya Momiji', 'Pedro Barros', 'Marah Duran', 'Kelly Hart',
+                    'Rei Iida', 'Alana Smith', 'Jamie Foy'],
+    'Country': ['Japan', 'Great Britain', 'Japan', 'Brazil', 'USA', 'USA', 'Japan', 'USA', 'USA'],
+    'Medal Type': ['Gold', 'Bronze', 'Silver', 'Gold', 'Bronze', 'Silver', 'Gold', 'Bronze', 'Silver'],
+    'Score': [94.56, 88.25, 91.42, 95.32, 89.54, 92.11, 90.00, 85.75, 91.25],
+    'Trick Difficulty': [8, 7, 7, 9, 8, 8, 7, 7, 9],
+    'Age': [22, 13, 13, 26, 22, 28, 18, 19, 24]
+}
+
+df = pd.DataFrame(data)
+
+df.to_csv('dataset.csv', index=False)
+
+print("Dataset created and saved as dataset.csv")
